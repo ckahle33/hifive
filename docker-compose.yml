@@ -7,7 +7,7 @@ services:
 
   web:
     build: .
-    command: rail server puma -p 3000 --binding 0.0.0.0
+    command: rails server puma -p 3000 --binding 0.0.0.0
     ports:
       - "3000:3000"
     links:
