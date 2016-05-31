@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
-
 gem 'puma'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 # Use SCSS for stylesheets
@@ -16,8 +15,11 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
+gem 'dotenv'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem 'aws-sdk', '~> 2.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

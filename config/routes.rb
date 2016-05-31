@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'files#index'
+  root 'user_files#index'
+  resources :user_files
 end
