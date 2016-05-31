@@ -29,7 +29,7 @@ class UserFilesController < ApplicationController
   end
 
   def file_params
-    params.require(:user_file).permit(:name, :path)
+    params.require(:user_file).permit(:name, :url, :media)
   end
 
 end
