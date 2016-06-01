@@ -1,2 +1,6 @@
 .info
-  = @user_file.name
+  %h2= @user_file.media_file_name
+  - if @user_file.media_content_type.include?("audio") || @user_file.media_content_type.include?("video")
+    = video_tag @user_file.media, :controls => true
+  - else
+    = image_tag @user_file.media

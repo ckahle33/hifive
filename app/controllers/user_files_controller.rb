@@ -1,6 +1,7 @@
 class UserFilesController < ApplicationController
 
   def index
+    @user_files = UserFile.all
   end
 
   def new
@@ -15,6 +16,7 @@ class UserFilesController < ApplicationController
   end
 
   def create
+    # raise params.inspect
     @user_file = UserFile.new(file_params)
 
     respond_to do |format|
@@ -22,7 +24,7 @@ class UserFilesController < ApplicationController
         format.html { redirect_to @user_file, notice: "#{@user_file.name} was successfully created." }
         format.json { render :show, status: :created, location: @user_file }
       else
-        format.html { render :new }
+        format.html { render :new, notice: "#{@user_file.name} could not be created!" }
         format.json { render json: @user_file.errors, status: :unprocessable_entity }
       end
     end

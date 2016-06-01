@@ -1,4 +1,5 @@
-.container
-  .jumbotron
-    %h1 welome to yodafile
-    %h2 5G of storage for free, for anything.
+%h2 my files
+%ul.list-group
+  - @user_files.each do |file|
+    %li.list-group-item
+      = link_to "#{file.media_file_name}", user_file_path(file.id)

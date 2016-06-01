@@ -13,4 +13,4 @@ services:
     links:
       - db
     volumes:
-      - .:/yodafile
+      - .:/hifive

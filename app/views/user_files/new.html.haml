@@ -1,5 +1,10 @@
 .container
   .new-form
-    = form_for :user_file, url: user_files_path, html: { multipart: true } do |form|
-      = form.file_field :media
-      = form.submit 'upload',:class => "form_submit"
+    = form_for :user_file, url: user_files_path, html: { :class => "form-horizontal"} do |form|
+      .form-group
+        = form.label :name, :class => "control-label"
+        = form.text_field :name, :class => "form-control"
+      .form-group
+        = form.file_field :media, :class => "form-control"
+      .form-group
+        = form.submit 'upload', :class => "btn btn-default"
