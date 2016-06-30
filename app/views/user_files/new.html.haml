@@ -5,6 +5,9 @@
         = form.label :name, :class => "control-label"
         = form.text_field :name, :class => "form-control"
       .form-group
+        = form.label :magnet, :class => "control-label"
+        = form.text_field :url, :class => "form-control"
+      .form-group
         = form.file_field :media, :class => "form-control"
       .form-group
         = form.submit 'upload', :class => "btn btn-default"

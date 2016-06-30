@@ -2,4 +2,4 @@
 %ul.list-group
   - @user_files.each do |file|
     %li.list-group-item
-      = link_to "#{file.media_file_name}", user_file_path(file.id)
+      = link_to "#{file.name}", user_file_path(file.id)
